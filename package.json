@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "SASS y NPM",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "sass": "sass --watch src/img/scss:dist/css"
+    "sass": "sass --watch src/img/scss:dist/css",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/landogomez/festivalmusica#readme",
   "devDependencies": {
     "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.77.8"
   }
 }
