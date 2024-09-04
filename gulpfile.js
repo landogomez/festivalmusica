@@ -6,9 +6,9 @@ import gulpSass from 'gulp-sass'
 const sass = gulpSass(dartSass)
 
 export function css( done ) {
-    src('src/img/scss/app.scss')
+    src('src/img/scss/app.scss', {sourcemaps: true})
         .pipe( sass().on('error', sass.logError) )
-        .pipe( dest('dist/css'))
+        .pipe( dest('dist/css', {sourcemaps: true}))
 
     done()
 }
