@@ -15,9 +15,29 @@ function crearGaleria() {
 
         //Event Handler
         imagen.onclick = function() {
-            console.log('Diste Click... ',i)
+            mostrarImagen(i)
         }
 
         galeria.appendChild(imagen)
     }
+}
+
+function mostrarImagen(i) {
+
+    // Generar Modal
+    const modal = document.createElement('DIV')
+    modal.classList.add('modal')
+    modal.onclick = cerrarModal
+
+    //Agregar al HTML
+    const body = document.querySelector('body')
+    body.appendChild(modal)
+
+
+}
+
+function cerrarModal() {
+    const modal = document.querySelector('.modal')
+
+    modal?.remove()
 }
